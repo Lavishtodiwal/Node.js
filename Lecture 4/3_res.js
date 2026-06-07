@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
   res.write("<head><title>My first page</title></head>");
   res.write("<body><h1>This is my first page using the </h1></body>");
   res.write("</html>");
-  res.end();
+  res.end(); //its manditory unless it will loading only.........
 });
 
 server.listen(port, () => {
