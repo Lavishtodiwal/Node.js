@@ -1,0 +1,8 @@
+node_modules/
+.env
+*.log
+
+user.txt
+user1.txt
+
+.vscode/

@@ -1,0 +1,9 @@
+Types of the Error
+
+    1.Syntax Error -> An error in the code's Strucuter, causing it to not compile or run (e.g. Semicolon  missing)
+
+    2.Logical Error: The code runs but produces incorrect results 
+      due to faulty logic (e.g., wrong formula).
+      
+    3.Runtime Error: An error that occurs while the program is 
+      running, often due to invalid operations
