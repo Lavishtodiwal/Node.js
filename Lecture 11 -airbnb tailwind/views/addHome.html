@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>airbnb add Home </title>
+  <link rel="stylesheet" href="/css/output.css">
+</head>
+
+<body class="bg-gray-100 font-sans">
+
+  <header class="bg-red-500 text-white p-4 shadow-md">
+    <nav class="container mx-auto flex justify-between items-center">
+
+      <ul class="flex space-x-4">
+        <li>
+          <a href="/" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">
+            Go to Home
+          </a>
+        </li>
+
+        <li>
+          <a href="/host/add-home" class="hover:bg-red-400 py-2 px-4 rounded transition duration-300">
+            Add Home
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+  </header>
+  <main class="container mx-auto bg-white shadow-lg rounded-lg p-8 mt-10 max-w-xl">
+
+    <h1 class="text-3xl text-gray-800 font-bold text-center mb-6 underline">Register Your Home Here</h1>
+
+    <form action="/host/add-home" method="POST" class="flex justify-center items-center flex-col">
+      <label for="houseName" class="text-center font-semibold text-gray-700 text-xl">Enter Your House Name </label>
+  
+      <input type="text" name="houseName" id="houseName" placeholder="Enter your house Name" class="text-center border-2 border-gray-400 rounded-md mt-3 mb-3">
+      <button type="submit" class="min-h-8 w-16 bg-blue-900 text-white cursor-pointer" >Submit</button>
+  </main>
+</body>
+
+</html>
