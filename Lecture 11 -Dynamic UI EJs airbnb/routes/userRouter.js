@@ -12,8 +12,9 @@ userRouter.get("/", (req, res, next) => {
   console.log(registeredHomes);
   // res.sendFile(path.join(rootDir, "views", "home.html")); //for html serving pages
   res.render("home", {
-    registeredHomes: registeredHomes,
+    registeredHomes,
     pageTitle: "airbnb Home",
+    currentPage: "Home",
   }); //for ejs
 });
 
