@@ -1,0 +1,19 @@
+{
+  "name": "lecture-10--airbnb",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Lavish Todiwal",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.3.0",
+    "ejs": "^6.0.1",
+    "express": "^5.2.1",
+    "tailwindcss": "^4.3.0"
+  }
+}
