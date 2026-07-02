@@ -1,5 +1,5 @@
-<%- include('partials/head') %>
-  <%- include('partials/nav') %>
+<%- include('../partials/head') %>
+  <%- include('../partials/nav') %>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap"
@@ -212,6 +212,10 @@
                     </p>
                     <div class="card-footer">
                       <span class="card-rating">★ <%= home.rating %> / 10</span>
+                    </div>
+                    <div class="text-center">
+                      <a href="/homes/<%= home.id %>" class="bg-green-400">Details</a>
+                      <%- include('../partials/favorite',{home:home}) %>
                     </div>
                   </div>
 

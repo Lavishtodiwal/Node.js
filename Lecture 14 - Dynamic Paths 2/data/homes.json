@@ -1,0 +1,98 @@
+[
+  {
+    "houseName": "Entilia Villa new",
+    "priceNight": "12000",
+    "rating": "10",
+    "location": "10",
+    "photo": "https://images.pexels.com/photos/36547187/pexels-photo-36547187.jpeg",
+    "id": "1"
+  },
+  {
+    "id": "2",
+    "houseName": "Utsac Resort",
+    "priceNight": "7400",
+    "rating": "10",
+    "location": "Meerut, Uttar Pradesh",
+    "photo": "https://images.pexels.com/photos/18154651/pexels-photo-18154651.jpeg"
+  },
+  {
+    "houseName": "Samar Homes new",
+    "priceNight": "8000",
+    "rating": "10",
+    "location": "Noida, Uttar Pradesh",
+    "photo": "https://plus.unsplash.com/premium_photo-1689609950112-d66095626efb?q=80&w=387&auto=format&fit=crop",
+    "id": "3"
+  },
+  {
+    "id": "4",
+    "houseName": "Ocean Breeze Villa",
+    "priceNight": "9500",
+    "rating": "9",
+    "location": "Goa",
+    "photo": "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg"
+  },
+  {
+    "id": "5",
+    "houseName": "Royal Palace Stay",
+    "priceNight": "6800",
+    "rating": "8",
+    "location": "Jaipur, Rajasthan",
+    "photo": "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg"
+  },
+  {
+    "id": "6",
+    "houseName": "Mountain Escape",
+    "priceNight": "5200",
+    "rating": "9",
+    "location": "Shimla, Himachal Pradesh",
+    "photo": "https://images.pexels.com/photos/2102587/pexels-photo-2102587.jpeg"
+  },
+  {
+    "id": "7",
+    "houseName": "Lake View Cottage",
+    "priceNight": "4300",
+    "rating": "8",
+    "location": "Nainital, Uttarakhand",
+    "photo": "https://images.pexels.com/photos/271624/pexels-photo-271624.jpeg"
+  },
+  {
+    "id": "8",
+    "houseName": "Urban Luxury Apartment",
+    "priceNight": "8600",
+    "rating": "9",
+    "location": "Mumbai, Maharashtra",
+    "photo": "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg"
+  },
+  {
+    "id": "9",
+    "houseName": "Green Valley Retreat",
+    "priceNight": "3900",
+    "rating": "8",
+    "location": "Munnar, Kerala",
+    "photo": "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg"
+  },
+  {
+    "id": "10",
+    "houseName": "Skyline Penthouse",
+    "priceNight": "14500",
+    "rating": "10",
+    "location": "Bengaluru, Karnataka",
+    "photo": "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg"
+  },
+  {
+    "id": "11",
+    "houseName": "Desert View Camp",
+    "priceNight": "3500",
+    "rating": "9",
+    "location": "Jaisalmer, Rajasthan",
+    "photo": "https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg"
+  },
+  {
+    "id": "12",
+    "houseName": "Snow Peak Chalet",
+    "priceNight": "11000",
+    "rating": "10",
+    "location": "Gulmarg, Jammu & Kashmir",
+    "photo": "https://images.pexels.com/photos/221457/pexels-photo-221457.jpeg"
+  }
+]

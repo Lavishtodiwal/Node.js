@@ -1,0 +1,139 @@
+<%- include('../partials/head') %>
+  <%- include('../partials/nav') %>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet">
+
+    <style>
+      body {
+        background: linear-gradient(160deg, #fef7ee 0%, #fdf3e4 100%);
+        font-family: 'Inter', sans-serif;
+        min-height: 100vh;
+      }
+
+      .error-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 80px 24px;
+        text-align: center;
+      }
+
+      .error-code {
+        font-size: 140px;
+        line-height: 1;
+        font-weight: 700;
+        color: #f97316;
+        margin: 0;
+        font-family: 'Playfair Display', serif;
+      }
+
+      .error-title {
+        font-size: 42px;
+        color: #111827;
+        margin: 12px 0;
+        font-family: 'Playfair Display', serif;
+      }
+
+      .error-text {
+        color: #6b7280;
+        font-size: 17px;
+        max-width: 550px;
+        margin: 0 auto 40px;
+        line-height: 1.7;
+      }
+
+      .error-card {
+        background: white;
+        border-radius: 24px;
+        padding: 40px;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.06);
+      }
+
+      .house-icon {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 25px;
+        color: #f97316;
+      }
+
+      .btn-group {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+      }
+
+      .btn-primary {
+        background: #f97316;
+        color: white;
+        text-decoration: none;
+        padding: 12px 22px;
+        border-radius: 10px;
+        font-weight: 600;
+        transition: .2s;
+      }
+
+      .btn-primary:hover {
+        background: #ea6c0a;
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary {
+        background: white;
+        color: #f97316;
+        text-decoration: none;
+        padding: 12px 22px;
+        border: 2px solid #f97316;
+        border-radius: 10px;
+        font-weight: 600;
+        transition: .2s;
+      }
+
+      .btn-secondary:hover {
+        background: #fff7ed;
+      }
+
+      @media(max-width:768px) {
+        .error-code {
+          font-size: 90px;
+        }
+
+        .error-title {
+          font-size: 32px;
+        }
+      }
+    </style>
+
+    <body>
+
+      <main class="error-container">
+
+        <div class="error-card">
+
+
+
+          <h2 class="error-title">
+            My bookings
+          </h2>
+
+
+
+          <div class="btn-group">
+            <a href="/" class="btn-primary">
+              🏠 Back To Home
+            </a>
+
+            <a href="/host/add-home" class="btn-secondary">
+              ➕ List Your Home
+            </a>
+          </div>
+
+        </div>
+
+      </main>
+
+    </body>
+
+    </html>j
