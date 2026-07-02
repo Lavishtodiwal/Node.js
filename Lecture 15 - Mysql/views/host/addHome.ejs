@@ -1,0 +1,218 @@
+<%- include('../partials/head') %>
+  <%- include('../partials/nav') %>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet">
+
+    <style>
+      body {
+        background: linear-gradient(160deg, #fef7ee 0%, #fdf3e4 100%);
+        font-family: 'Inter', sans-serif;
+        min-height: 100vh;
+      }
+
+      .field-label {
+        display: block;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        color: #6b7280;
+        margin-bottom: 6px;
+      }
+
+      .form-input {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 11px 14px;
+        font-size: 15px;
+        border: 1.5px solid #e5e7eb;
+        border-radius: 10px;
+        color: #111827;
+        background: #fafafa;
+        outline: none;
+        transition: border-color 0.18s, box-shadow 0.18s;
+        font-family: 'Inter', sans-serif;
+      }
+
+      .form-input::placeholder {
+        color: #9ca3af;
+      }
+
+      .form-input:focus {
+        border-color: #f97316;
+        box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+        background: #fff;
+      }
+
+      .input-addon {
+        display: flex;
+        border: 1.5px solid #e5e7eb;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #fafafa;
+        transition: border-color 0.18s, box-shadow 0.18s;
+      }
+
+      .input-addon:focus-within {
+        border-color: #f97316;
+        box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.12);
+      }
+
+      .addon-prefix {
+        padding: 11px 12px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #9ca3af;
+        background: #f3f4f6;
+        border-right: 1.5px solid #e5e7eb;
+        display: flex;
+        align-items: center;
+        user-select: none;
+      }
+
+      .addon-input {
+        flex: 1;
+        padding: 11px 14px;
+        font-size: 15px;
+        border: none;
+        outline: none;
+        color: #111827;
+        background: transparent;
+        font-family: 'Inter', sans-serif;
+        min-width: 0;
+      }
+
+      .addon-input::placeholder {
+        color: #9ca3af;
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+      }
+
+      .submit-btn {
+        width: 100%;
+        padding: 13px;
+        background: #f97316;
+        color: #fff;
+        font-weight: 600;
+        font-size: 15px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        letter-spacing: 0.3px;
+        font-family: 'Inter', sans-serif;
+        transition: background 0.18s, transform 0.12s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+
+      .submit-btn:hover {
+        background: #ea6c0a;
+        transform: translateY(-1px);
+      }
+
+      .submit-btn:active {
+        transform: translateY(0);
+      }
+
+      @media (max-width: 500px) {
+        .form-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+
+    </head>
+
+    <body>
+
+      <main style="max-width: 480px; margin: 0 auto; padding: 48px 20px 80px;">
+
+        <!-- Header -->
+        <div style="text-align: center; margin-bottom: 28px;">
+
+          <h1
+            style="font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700; color: #111827; margin: 0 0 8px; line-height: 1.2;">
+            List Your House</h1>
+          <p style="color: #6b7280; font-size: 15px; margin: 0;">Fill in the details to start hosting guests</p>
+        </div>
+
+        <!-- Form Card -->
+        <div
+          style="background: white; border-radius: 20px; padding: 32px 28px; box-shadow: 0 2px 30px rgba(0, 0, 0, 0.07);">
+
+          <form action="/host/add-home" method="POST">
+
+            <!-- Property Name -->
+            <div style="margin-bottom: 18px;">
+              <label for="houseName" class="field-label">Property Name</label>
+              <input type="text" name="houseName" id="houseName" placeholder="e.g. Cozy Lakeside Retreat"
+                class="form-input">
+            </div>
+
+            <!-- Price + Rating — side by side -->
+            <div class="form-grid" style="margin-bottom: 18px;">
+              <div>
+                <label for="priceNight" class="field-label">Price per Night</label>
+                <div class="input-addon">
+                  <span class="addon-prefix">₹</span>
+                  <input type="number" name="priceNight" id="priceNight" placeholder="2,500" class="addon-input">
+                </div>
+              </div>
+              <div>
+                <label for="rating" class="field-label">Rating (1 – 10)</label>
+                <input type="number" min="1" max="10" name="rating" id="rating" placeholder="e.g. 8" class="form-input">
+              </div>
+            </div>
+
+            <!-- Location — FIXED: was type="number" -->
+            <div style="margin-bottom: 18px;">
+              <label for="location" class="field-label">Location</label>
+              <input type="text" name="location" id="location" placeholder="e.g. Manali, Himachal Pradesh"
+                class="form-input">
+            </div>
+
+            <!-- Photo URL -->
+            <div style="margin-bottom: 24px;">
+              <label for="photo" class="field-label">Photo URL</label>
+              <input type="text" name="photo" id="photo" placeholder="https://example.com/photo.jpg" class="form-input">
+            </div>
+
+            <!-- //description -->
+            <div style="margin-bottom: 24px;">
+              <label for="description" class="field-label">Description</label>
+              <textarea name="description" id="description" rows="5"
+                placeholder="Write a short description about your property..." class="form-input"
+                style="resize: vertical;"></textarea>
+            </div>
+
+            <!-- Submit -->
+            <button type="submit" class="submit-btn">
+              List My Property
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </button>
+
+          </form>
+
+        </div>
+
+        <p style="text-align: center; color: #9ca3af; font-size: 13px; margin-top: 16px;">
+          Your listing will be reviewed before going live.
+        </p>
+
+      </main>
+
+    </body>
+
+    </html>
