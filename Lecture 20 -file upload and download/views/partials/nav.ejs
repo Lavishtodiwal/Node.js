@@ -1,0 +1,145 @@
+<link
+  href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap"
+  rel="stylesheet">
+
+<header class="sticky top-0 z-50 bg-white border-b border-gray-200">
+  <nav class="max-w-7xl mx-auto h-20 px-6 flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="/" class="flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" class="w-8 h-8 text-[#FF385C]" fill="currentColor">
+
+        <path
+          d="M16 2.5c-1.5 0-2.9.8-3.7 2.1L3.9 20.1a5.3 5.3 0 0 0 9.2 5.3l2.9-5.1 2.9 5.1a5.3 5.3 0 0 0 9.2-5.3L19.7 4.6A4.3 4.3 0 0 0 16 2.5zm0 5c.5 0 .9.3 1.2.7l8.3 15.2a2.5 2.5 0 0 1-4.4 2.5L16 16.8l-5.1 9.1a2.5 2.5 0 0 1-4.4-2.5L14.8 8.2c.3-.4.7-.7 1.2-.7z" />
+      </svg>
+
+      <span class="text-2xl font-bold text-[#FF385C] font-['Playfair_Display']">
+        airbnb
+      </span>
+    </a>
+
+    <!-- Center Navigation -->
+
+    <% if (isLoggedIn) { %>
+
+      <% if (user && user.role==="guest" ) { %>
+
+        <div
+          class="hidden lg:flex items-center bg-white border border-gray-300 rounded-full shadow-md hover:shadow-lg transition">
+
+          <a href="/"
+            class="<%= currentPage === 'Home' ? 'font-semibold text-black' : 'text-gray-600' %> px-6 py-3 hover:bg-gray-100 rounded-l-full transition">
+            Home
+          </a>
+
+          <div class="w-px h-6 bg-gray-300"></div>
+
+          <a href="/home-list"
+            class="<%= currentPage === 'home-list' ? 'font-semibold text-black' : 'text-gray-600' %> px-6 py-3 hover:bg-gray-100 transition">
+            Explore
+          </a>
+
+          <div class="w-px h-6 bg-gray-300"></div>
+
+          <a href="/favorite"
+            class="<%= currentPage === 'favorite' ? 'font-semibold text-black' : 'text-gray-600' %> px-6 py-3 hover:bg-gray-100 transition">
+            Favorites
+          </a>
+
+          <div class="w-px h-6 bg-gray-300"></div>
+
+          <a href="/bookings"
+            class="<%= currentPage === 'bookings' ? 'font-semibold text-black' : 'text-gray-600' %> px-6 py-3 hover:bg-gray-100 rounded-r-full transition">
+            Trips
+          </a>
+
+        </div>
+
+        <% } else if (user && user.role==="host" ) { %>
+
+          <div
+            class="hidden lg:flex items-center bg-white border border-gray-300 rounded-full shadow-md hover:shadow-lg transition">
+
+            <a href="/host/host-home-list"
+              class="<%= currentPage === 'host-homes' ? 'font-semibold text-black' : 'text-gray-600' %> px-6 py-3 hover:bg-gray-100 rounded-l-full transition">
+              My Homes
+            </a>
+
+            <div class="w-px h-6 bg-gray-300"></div>
+
+            <a href="/host/add-home"
+              class="<%= currentPage === 'Add Home' ? 'font-semibold text-black' : 'text-gray-600' %> px-6 py-3 hover:bg-gray-100 rounded-r-full transition">
+              Add Home
+            </a>
+
+          </div>
+
+          <% } %>
+
+            <% } %>
+
+              <div class="flex items-center gap-3">
+
+                <% if(isLoggedIn){ %>
+
+                  <% if(user && user.role==="guest" ){ %>
+
+                    <a href="/host/add-home"
+                      class="hidden md:block font-medium hover:bg-gray-100 px-4 py-3 rounded-full transition">
+                      Become a Host
+                    </a>
+
+                    <% } %>
+
+                      <% if(user && user.role==="host" ){ %>
+
+                        <a href="/host/add-home"
+                          class="hidden md:block font-medium hover:bg-gray-100 px-4 py-3 rounded-full transition">
+                          Add Home
+                        </a>
+
+                        <% } %>
+
+                          <div
+                            class="flex items-center gap-3 border border-gray-300 rounded-full px-3 py-2 shadow-sm hover:shadow-md transition">
+
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-700" fill="none"
+                              viewBox="0 0 24 24" stroke="currentColor">
+
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+
+                            </svg>
+
+                            <div
+                              class="w-8 h-8 rounded-full bg-[#FF385C] text-white flex items-center justify-center font-semibold">
+
+                              <%= user ? user.fullName.charAt(0).toUpperCase() : "U" %>
+
+                            </div>
+
+                          </div>
+
+                          <form action="/logout" method="POST">
+                            <button class="text-sm text-gray-700 hover:text-[#FF385C] font-medium ml-2 cursor-pointer">
+                              Logout
+                            </button>
+                          </form>
+
+                          <% } else { %>
+
+                            <a href="/login" class="font-medium hover:bg-gray-100 px-4 py-3 rounded-full transition">
+                              Login
+                            </a>
+
+                            <a href="/signup"
+                              class="bg-[#FF385C] hover:bg-[#E31C5F] text-white px-6 py-3 rounded-full font-semibold transition">
+                              Sign Up
+                            </a>
+
+                            <% } %>
+
+              </div>
+
+  </nav>
+</header>
